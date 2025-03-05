@@ -1,0 +1,18 @@
+public int roundSum(int a, int b, int c) {
+  int sum = 0;
+  sum = sum + round10(a)  + round10(b) + round10(c);
+  return sum;
+}
+public int round10(int num){
+   int rem = num % 10;
+   int number = 10;
+   int number1 = 0;
+   if(rem >= 5){
+     number = number - rem;
+     num = num + number;
+   }
+   if(rem < 5){
+     num = num- rem;
+   }
+   return num;
+}
