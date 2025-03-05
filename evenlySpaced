@@ -1,0 +1,39 @@
+public boolean evenlySpaced(int a, int b, int c) {
+  int largest = 0;
+  int medium = 0;
+  int smallest = 0;
+   if (a >= b && a >= c) {
+            largest = a;
+            if (b >= c) {
+                medium = b;
+                smallest = c;
+            } else {
+                medium = c;
+                smallest = b;
+            }
+        } else if (b >= a && b >= c) {
+            largest = b;
+            if (a >= c) {
+                medium = a;
+                smallest = c;
+            } else {
+                medium = c;
+                smallest = a;
+            }
+        } else {
+            largest = c;
+            if (a >= b) {
+                medium = a;
+                smallest = b;
+            } else {
+                medium = b;
+                smallest = a;
+            }
+        }
+   int diff = largest - medium;
+   int dif = medium - smallest;
+   if(diff == dif){
+     return true;
+   }
+   return false;
+}
