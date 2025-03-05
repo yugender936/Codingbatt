@@ -1,0 +1,9 @@
+public boolean makeBricks(int small, int big, int goal) {
+   
+   int bigBricks = Math.min(big,goal/5);
+   int remaining = goal - (bigBricks * 5);
+   if(remaining <= small){
+     return true;
+   }
+   return false;
+}
