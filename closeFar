@@ -1,0 +1,16 @@
+public boolean closeFar(int a, int b, int c) {
+  int ab = Math.abs(a-b);
+  int ac = Math.abs(a-c);
+  int bc = Math.abs(b-c);
+  if((ac >= 2 && ab >= 2)){
+    return false;
+  }
+  if((ac <= 1 && ab <= 1)&& (bc > 1)){
+    return false;
+  }
+  if((bc > 1) && (ac <= 1 || ab <= 1)){
+    return true; 
+  }
+  
+  return false;
+}
